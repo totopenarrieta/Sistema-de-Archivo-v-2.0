@@ -293,11 +293,11 @@ namespace Logica
                 }).ToList();
             }
         }
-        private int _idFile_Personal = 0;
+        private string _idFile_Personal = null;
         public void GetPersona()
         {
             _accion = "update";
-            _idFile_Personal = Convert.ToInt32(_dataGridView.CurrentRow.Cells[0].Value);
+            _idFile_Personal = Convert.ToString(_dataGridView.CurrentRow.Cells[0].Value);
             listTextBox[0].Text = Convert.ToString(_dataGridView.CurrentRow.Cells[0].Value);
             listTextBox[1].Text = Convert.ToString(_dataGridView.CurrentRow.Cells[1].Value);
             listTextBox[2].Text = Convert.ToString(_dataGridView.CurrentRow.Cells[2].Value);
@@ -376,7 +376,7 @@ namespace Logica
         {
             _accion = "insert";
             _num_pagina = 1;
-            _idFile_Personal = 0;
+            _idFile_Personal = null;
             image.Image = _imagBitmap;
             listLabel[0].Text = "Cédula de Identidad:";
             listLabel[1].Text = "Código de Archivo:";
